@@ -36,4 +36,10 @@
         <std>17:55</std>    
         <status>Cancelled</status>
     </record>
+    <record>
+        <flight>LS4467</flight>
+        <destination>Birmingham</destination> 
+        <std>19:00</std>    
+        <status> </status>
+    </record>
 </data-set>
