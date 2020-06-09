@@ -4,19 +4,19 @@
         <flight>SI350</flight>
         <destination>Southampton</destination> 
         <std>12:00</std>    
-        <status>Gate info at 11:20</status>
+        <status>Go to Gate 9</status>
     </record>
     <record>
         <flight>SI1234</flight>
         <destination>Southampton</destination> 
         <std>13:10</std>    
-        <status>Delayed</status>
+        <status>Gate info at 12:30</status>
     </record>
     <record>
         <flight>BA6969</flight>
         <destination>London Gatwick</destination> 
         <std>16:45</std>    
-        <status> </status>
+        <status>Delayed</status>
     </record>
     <record>
         <flight>EZY8746</flight>

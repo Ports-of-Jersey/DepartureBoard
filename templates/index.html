@@ -32,7 +32,13 @@
               <td>{{ row.flight }}</td>
               <td>{{ row.destination }}</td>
               <td>{{ row.std }}</td>
+              {% if 'go to gate' in row.status|lower %}
+              <td class="gateCalled" %}>{{ row.status }}</td>
+              {% elif row.status|lower == "cancelled" %}
+              <td class="cancelled">{{ row.status }}</td>
+              {% else %}
               <td>{{ row.status }}</td>
+              {% endif %}
             </tr>
           {% endfor %}            
           </tbody>

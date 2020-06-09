@@ -113,8 +113,12 @@ table.departures td{
 table.departures thead th    {
   text-align: left;
   background: #646464;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+.gateCalled {
+  color: lime;
 }
 
 .cancelled {
@@ -132,8 +136,8 @@ footer  {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
   color: white; 
   background-color: #646464;
   padding: 0.5em;
