@@ -32,6 +32,9 @@ class TableGenerator():
             arrivalairport = row['arrivalairport']
             row['arrivalairport'] = airportlookup[arrivalairport]
 
+            time_str = row['operationtime']
+            row['operationtime'] = time_str[11:16]
+
             try:
                 remarkfreetext = row['remarkfreetext']
                 row['remarkfreetext'] = statuslookup[remarkfreetext]
