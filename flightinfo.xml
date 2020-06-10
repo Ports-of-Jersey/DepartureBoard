@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <IATA_AIDX_FlightLegRS TimeStamp="2020-06-10T13:18:02.222953+01:00" Version="13.2" xmlns="http://www.iata.org/IATA/2007/00">
+         <Success/>
+         <FlightLeg>
+            <LegIdentifier>
+               <Airline CodeContext="3">SI</Airline>
+               <FlightNumber>350</FlightNumber>
+               <DepartureAirport CodeContext="3">JER</DepartureAirport>
+               <ArrivalAirport CodeContext="3">SOU</ArrivalAirport>
+               <OriginDate>2020-06-10</OriginDate>
+            </LegIdentifier>
+            <LegData>
+               <PublicStatus xsi:nil="true"/>
+               <OperatingAlliance xsi:nil="true"/>
+               <ServiceType>J</ServiceType>
+               <EstFlightDuration xsi:nil="true"/>
+               <OwnerAirline xsi:nil="true"/>
+               <CabinClass Class="7">
+                  <SeatCapacity>74</SeatCapacity>
+               </CabinClass>
+               <RemarkFreeText>GCL</RemarkFreeText>
+               <AirportResources Usage="Planned">
+                  <Resource DepartureOrArrival="Departure">
+                     <AirportZone xsi:nil="true"/>
+                     <AircraftParkingPosition>8</AircraftParkingPosition>
+                     <PassengerGate>8</PassengerGate>
+                     <Runway xsi:nil="true"/>
+                     <AircraftTerminal>T1</AircraftTerminal>
+                  </Resource>
+               </AirportResources>
+               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-10T11:00:00.000Z</OperationTime>
+               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-06-10T11:00:00.000Z</OperationTime>
+               <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-06-10T11:23:00.000Z</OperationTime>
+               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-06-10T11:15:00.000Z</OperationTime>
+               <AircraftInfo>
+                  <AircraftType>AT75</AircraftType>
+                  <AircraftSubType xsi:nil="true"/>
+                  <Registration>GISLL</Registration>
+                  <TailNumber xsi:nil="true"/>
+                  <AgentInfo DepartureOrArrival="Departure">SA</AgentInfo>
+                  <FleetNumber xsi:nil="true"/>
+                  <CallSign>BCI350</CallSign>
+               </AircraftInfo>
+            </LegData>
+            <TPA_Extension/>
+         </FlightLeg>
+      </IATA_AIDX_FlightLegRS>
+   </s:Body>
+</s:Envelope>
