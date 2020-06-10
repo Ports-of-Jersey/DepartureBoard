@@ -1,5 +1,6 @@
 from templates import *
 from bs4 import BeautifulSoup
+import json
 
 class TableGenerator():
     def __init__(self, template, source, elements, output):
@@ -15,7 +16,6 @@ class TableGenerator():
     def fetch_records(self):
         soup = BeautifulSoup(self.content, 'lxml')
         self.records = soup.find_all(elements['parent'])
-        print(self.records)
 
     def parse_records(self):
         self.context = {'table': []}
@@ -29,6 +29,15 @@ class TableGenerator():
                     print("No value found")
                     row['key'] = " "
 
+            arrivalairport = row['arrivalairport']
+            row['arrivalairport'] = airportlookup[arrivalairport]
+
+            try:
+                remarkfreetext = row['remarkfreetext']
+                row['remarkfreetext'] = statuslookup[remarkfreetext]
+            except KeyError:
+                print("No status given")
+
             self.context['table'].append(row)
 
     def render(self):
@@ -41,14 +50,24 @@ class TableGenerator():
 
 
 
-source = 'departures.xml'
+source = 'flightinfo.xml'
 output = 'output/index.html'
 template = 'index.html'
-parent = 'record'
-child = ['flight', 'destination', 'std', 'status']
+parent = 'flightleg'
+child = ['callsign', 'arrivalairport', 'operationtime', 'remarkfreetext']
 elements = {'parent': parent, 'child': child }
 
+airportlookup = 'airportlookup.json'
+statuslookup = 'statuslookup.json'
+
 generator = TableGenerator(template, source, elements, output)
+
+# load json lookup files
+with open(airportlookup, "r") as read_file:
+    airportlookup = json.load(read_file)
+
+with open(statuslookup, "r") as read_file:
+    statuslookup = json.load(read_file)
 
 # xml read/parse
 generator.read_file()

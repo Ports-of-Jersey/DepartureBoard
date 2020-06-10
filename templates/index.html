@@ -29,15 +29,15 @@
           <tbody>
           {% for row in table %}
             <tr>
-              <td>{{ row.flight }}</td>
-              <td>{{ row.destination }}</td>
-              <td>{{ row.std }}</td>
+              <td>{{ row.callsign }}</td>
+              <td>{{ row.arrivalairport }}</td>
+              <td>{{ row.operationtime }}</td>
               {% if 'go to gate' in row.status|lower %}
-              <td class="gateCalled" %}>{{ row.status }}</td>
+              <td class="gateCalled" %}>{{ row.remarkfreetext }}</td>
               {% elif row.status|lower == "cancelled" %}
-              <td class="cancelled">{{ row.status }}</td>
+              <td class="cancelled">{{ row.remarkfreetext }}</td>
               {% else %}
-              <td>{{ row.status }}</td>
+              <td>{{ row.remarkfreetext }}</td>
               {% endif %}
             </tr>
           {% endfor %}            
