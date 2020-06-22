@@ -1,8 +1,16 @@
-import json
+from zeep import Client
 
-lookup = 'airportlookup.json'
+wsdl = 'https://podbwebservice.ports.je/AIDXQueryFlights/Services/RequestFlightService.svc?wsdl'
+service = 'RequestFlightService'
+port = 'BasicHttpsBinding_IRequestFlightService'
+userID = 'POJInternal123'
 
-with open(lookup, "r") as read_file:
-    data = json.load(read_file)
+client = Client(wsdl = wsdl)
 
-print(data)
+service2 = client.bind(service, port)
+
+#print(service2.flightRequest(userID = userID, fullRefresh = False))
+
+data = service2.flightRequest(userID = userID, fullRefresh = False)
+
+print(data)  
