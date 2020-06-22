@@ -1,488 +1,719 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
-   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <IATA_AIDX_FlightLegRS TimeStamp="2020-06-10T14:15:10.0415536+01:00" Version="13.2" xmlns="http://www.iata.org/IATA/2007/00">
-         <Success/>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>H</OperationalSuffix>
-               <DepartureAirport CodeContext="3">JER</DepartureAirport>
-               <ArrivalAirport CodeContext="3">EMA</ArrivalAirport>
-               <OriginDate>2020-05-27</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText>DEP</RemarkFreeText>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Departure">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-05-27T17:25:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-05-27T17:25:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-05-27T17:36:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-05-27T17:26:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GJMCL</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Departure">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT23H</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>J</OperationalSuffix>
-               <DepartureAirport CodeContext="3">EMA</DepartureAirport>
-               <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
-               <OriginDate>2020-06-08</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText>ONB</RemarkFreeText>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Arrival">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-08T09:05:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-08T09:04:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-08T09:04:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-08T09:09:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GJMCT</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Arrival">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT023J</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>H</OperationalSuffix>
-               <DepartureAirport CodeContext="3">JER</DepartureAirport>
-               <ArrivalAirport CodeContext="3">EMA</ArrivalAirport>
-               <OriginDate>2020-06-08</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText>DEP</RemarkFreeText>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Departure">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-08T17:25:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-06-08T17:25:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-06-08T17:40:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-06-08T17:36:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GJMCT</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Departure">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT23H</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>J</OperationalSuffix>
-               <DepartureAirport CodeContext="3">EMA</DepartureAirport>
-               <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
-               <OriginDate>2020-06-09</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText>ONB</RemarkFreeText>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Arrival">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-09T09:05:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-09T09:01:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-09T09:01:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-09T09:05:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GJMCT</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Arrival">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT023J</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>H</OperationalSuffix>
-               <DepartureAirport CodeContext="3">JER</DepartureAirport>
-               <ArrivalAirport CodeContext="3">EMA</ArrivalAirport>
-               <OriginDate>2020-06-09</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText>DEP</RemarkFreeText>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Departure">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-09T17:25:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-06-09T17:25:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-06-09T17:35:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-06-09T17:26:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GJMCT</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Departure">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT23H</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>J</OperationalSuffix>
-               <DepartureAirport CodeContext="3">EMA</DepartureAirport>
-               <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
-               <OriginDate>2020-06-10</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText>ONB</RemarkFreeText>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Arrival">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-10T09:05:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-10T09:01:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-10T09:00:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-10T09:04:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GJMCT</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Arrival">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT023J</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">SI</Airline>
-               <FlightNumber>350</FlightNumber>
-               <DepartureAirport CodeContext="3">JER</DepartureAirport>
-               <ArrivalAirport CodeContext="3">SOU</ArrivalAirport>
-               <OriginDate>2020-06-10</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>J</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>74</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText>GCL</RemarkFreeText>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Departure">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>8</AircraftParkingPosition>
-                     <PassengerGate>8</PassengerGate>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>T1</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-10T11:00:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-06-10T11:00:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-06-10T11:23:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-06-10T11:15:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>AT75</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GISLL</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Departure">SA</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>BCI350</CallSign>
-               </AircraftInfo>
-            </LegData>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">SI</Airline>
-               <FlightNumber>351</FlightNumber>
-               <DepartureAirport CodeContext="3">SOU</DepartureAirport>
-               <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
-               <OriginDate>2020-06-10</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>J</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>74</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText>ETA</RemarkFreeText>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Arrival">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>8</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>T1</AircraftTerminal>
-                     <BaggageClaimUnit>2</BaggageClaimUnit>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-10T13:10:00.000Z</OperationTime>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-10T13:30:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>AT75</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GISLL</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Arrival">SA</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>BCI351</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>H</OperationalSuffix>
-               <DepartureAirport CodeContext="3">JER</DepartureAirport>
-               <ArrivalAirport CodeContext="3">EMA</ArrivalAirport>
-               <OriginDate>2020-06-10</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText xsi:nil="true"/>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Departure">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-10T17:25:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration>GJMCT</Registration>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Departure">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT23H</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>J</OperationalSuffix>
-               <DepartureAirport CodeContext="3">EMA</DepartureAirport>
-               <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
-               <OriginDate>2020-06-11</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText xsi:nil="true"/>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Arrival">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-11T09:05:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration xsi:nil="true"/>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Arrival">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT023J</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-         <FlightLeg>
-            <LegIdentifier>
-               <Airline CodeContext="3">NPT</Airline>
-               <FlightNumber>023</FlightNumber>
-               <OperationalSuffix>H</OperationalSuffix>
-               <DepartureAirport CodeContext="3">JER</DepartureAirport>
-               <ArrivalAirport CodeContext="3">EMA</ArrivalAirport>
-               <OriginDate>2020-06-11</OriginDate>
-            </LegIdentifier>
-            <LegData>
-               <PublicStatus xsi:nil="true"/>
-               <OperatingAlliance xsi:nil="true"/>
-               <ServiceType>M</ServiceType>
-               <EstFlightDuration xsi:nil="true"/>
-               <OwnerAirline xsi:nil="true"/>
-               <CabinClass Class="7">
-                  <SeatCapacity>0</SeatCapacity>
-               </CabinClass>
-               <RemarkFreeText xsi:nil="true"/>
-               <AirportResources Usage="Planned">
-                  <Resource DepartureOrArrival="Departure">
-                     <AirportZone xsi:nil="true"/>
-                     <AircraftParkingPosition>18</AircraftParkingPosition>
-                     <Runway xsi:nil="true"/>
-                     <AircraftTerminal>FRT</AircraftTerminal>
-                  </Resource>
-               </AirportResources>
-               <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-11T17:25:00.000Z</OperationTime>
-               <AircraftInfo>
-                  <AircraftType>B733</AircraftType>
-                  <AircraftSubType xsi:nil="true"/>
-                  <Registration xsi:nil="true"/>
-                  <TailNumber xsi:nil="true"/>
-                  <AgentInfo DepartureOrArrival="Departure">CE</AgentInfo>
-                  <FleetNumber xsi:nil="true"/>
-                  <CallSign>NPT23H</CallSign>
-               </AircraftInfo>
-            </LegData>
-            <TPA_Extension/>
-         </FlightLeg>
-      </IATA_AIDX_FlightLegRS>
-   </s:Body>
-</s:Envelope><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
-  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" Version="13.2">
-      <Success/>
-      <Warnings>
-        <Warning Type="911">Warning: Update Refresh not possible at this time please try in 11.7441836 seconds.</Warning>
-      </Warnings>
-    </IATA_AIDX_FlightLegRS>
-  </s:Body>
-</s:Envelope>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" Version="13.2">
+    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" TimeStamp="2020-06-22T15:06:36.1445102+01:00" Version="13.2">
       <Success/>
-      <Warnings>
-        <Warning Type="911">Warning: Update Refresh not possible at this time please try in 29.5265784 seconds.</Warning>
-      </Warnings>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">BA</Airline>
+          <FlightNumber>2769</FlightNumber>
+          <DepartureAirport CodeContext="3">JER</DepartureAirport>
+          <ArrivalAirport CodeContext="3">LGW</ArrivalAirport>
+          <OriginDate>2020-03-19</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>144</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>DEP</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition>1</AircraftParkingPosition>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+            </Resource>
+          </AirportResources>
+          <AirportResources Usage="Actual">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition>1</AircraftParkingPosition>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal xsi:nil="true"/>
+              <CheckInInfo>
+                <FirstPosition>1</FirstPosition>
+                <LastPosition>6</LastPosition>
+              </CheckInInfo>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-03-19T07:05:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-03-19T07:05:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-03-19T07:00:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>A319</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration xsi:nil="true"/>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Departure">BAW</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign xsi:nil="true"/>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">BA</Airline>
+          <FlightNumber>2770</FlightNumber>
+          <DepartureAirport CodeContext="3">LGW</DepartureAirport>
+          <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
+          <OriginDate>2020-03-19</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>144</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>ONB</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Arrival">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition>1</AircraftParkingPosition>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+              <BaggageClaimUnit>3</BaggageClaimUnit>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-03-19T08:35:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-03-19T08:35:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-03-19T08:40:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>A319</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration xsi:nil="true"/>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Arrival">BAW</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign xsi:nil="true"/>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">BA</Airline>
+          <FlightNumber>2771</FlightNumber>
+          <DepartureAirport CodeContext="3">JER</DepartureAirport>
+          <ArrivalAirport CodeContext="3">LGW</ArrivalAirport>
+          <OriginDate>2020-03-19</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>144</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>DEP</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition>1</AircraftParkingPosition>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+            </Resource>
+          </AirportResources>
+          <AirportResources Usage="Actual">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition>1</AircraftParkingPosition>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal xsi:nil="true"/>
+              <CheckInInfo>
+                <FirstPosition>1</FirstPosition>
+                <LastPosition>6</LastPosition>
+              </CheckInInfo>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-03-19T09:20:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-03-19T09:20:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-03-19T09:15:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>A319</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration xsi:nil="true"/>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Departure">BAW</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign xsi:nil="true"/>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>351</FlightNumber>
+          <DepartureAirport CodeContext="3">SOU</DepartureAirport>
+          <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
+          <OriginDate>2020-03-19</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>68</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>ONB</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Arrival">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition>1</AircraftParkingPosition>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+              <BaggageClaimUnit>2</BaggageClaimUnit>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-03-19T09:20:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-03-19T09:20:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-03-19T09:25:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT72</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration xsi:nil="true"/>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Arrival">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI1-9999</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>351</FlightNumber>
+          <DepartureAirport CodeContext="3">SOU</DepartureAirport>
+          <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
+          <OriginDate>2020-06-17</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>74</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>ONB</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Arrival">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+              <BaggageClaimUnit>2</BaggageClaimUnit>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-17T13:10:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-17T13:44:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-17T13:43:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-17T13:46:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT75</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLL</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Arrival">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI351</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>592</FlightNumber>
+          <DepartureAirport CodeContext="3">JER</DepartureAirport>
+          <ArrivalAirport CodeContext="3">SOU</ArrivalAirport>
+          <OriginDate>2020-06-19</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>74</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>DEP</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+            </Resource>
+          </AirportResources>
+          <AirportResources Usage="Actual">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal xsi:nil="true"/>
+              <CheckInInfo>
+                <FirstPosition>17</FirstPosition>
+                <LastPosition>18</LastPosition>
+              </CheckInInfo>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-19T10:40:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-06-19T11:10:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-06-19T11:14:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-06-19T11:07:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT75</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLK</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Departure">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI592</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>350</FlightNumber>
+          <DepartureAirport CodeContext="3">JER</DepartureAirport>
+          <ArrivalAirport CodeContext="3">SOU</ArrivalAirport>
+          <OriginDate>2020-06-19</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>74</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>DEP</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+            </Resource>
+          </AirportResources>
+          <AirportResources Usage="Actual">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal xsi:nil="true"/>
+              <CheckInInfo>
+                <FirstPosition>17</FirstPosition>
+                <LastPosition>18</LastPosition>
+              </CheckInInfo>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-19T11:00:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-06-19T11:40:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-06-19T11:49:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-06-19T11:41:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT75</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLM</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Departure">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI350</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>593</FlightNumber>
+          <DepartureAirport CodeContext="3">SOU</DepartureAirport>
+          <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
+          <OriginDate>2020-06-19</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>74</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>ONB</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Arrival">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+              <BaggageClaimUnit>2</BaggageClaimUnit>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-19T12:50:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-19T13:03:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-19T13:03:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-19T13:06:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT75</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLK</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Arrival">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI593</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>351</FlightNumber>
+          <DepartureAirport CodeContext="3">SOU</DepartureAirport>
+          <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
+          <OriginDate>2020-06-19</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>74</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>ARR</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Arrival">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+              <BaggageClaimUnit>2</BaggageClaimUnit>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-19T13:10:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-19T14:03:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-19T14:06:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-19T14:06:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT75</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLM</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Arrival">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI351</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>592</FlightNumber>
+          <DepartureAirport CodeContext="3">JER</DepartureAirport>
+          <ArrivalAirport CodeContext="3">SOU</ArrivalAirport>
+          <OriginDate>2020-06-22</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity xsi:nil="true"/>
+          </CabinClass>
+          <RemarkFreeText>DEP</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+            </Resource>
+          </AirportResources>
+          <AirportResources Usage="Actual">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal xsi:nil="true"/>
+              <CheckInInfo>
+                <FirstPosition>17</FirstPosition>
+                <LastPosition>18</LastPosition>
+              </CheckInInfo>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-22T10:40:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-06-22T10:40:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-06-22T11:04:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-06-22T10:56:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType xsi:nil="true"/>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLN</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Departure">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI592</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>350</FlightNumber>
+          <DepartureAirport CodeContext="3">JER</DepartureAirport>
+          <ArrivalAirport CodeContext="3">SOU</ArrivalAirport>
+          <OriginDate>2020-06-22</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>74</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>DEP</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+            </Resource>
+          </AirportResources>
+          <AirportResources Usage="Actual">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal xsi:nil="true"/>
+              <CheckInInfo>
+                <FirstPosition>17</FirstPosition>
+                <LastPosition>18</LastPosition>
+              </CheckInInfo>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-22T11:00:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="EST">2020-06-22T11:35:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TKO" CodeContext="2005" TimeType="ACT">2020-06-22T11:33:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="ACT">2020-06-22T11:25:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT75</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLK</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Departure">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI350</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>593</FlightNumber>
+          <DepartureAirport CodeContext="3">SOU</DepartureAirport>
+          <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
+          <OriginDate>2020-06-22</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity xsi:nil="true"/>
+          </CabinClass>
+          <RemarkFreeText>ONB</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Arrival">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+              <BaggageClaimUnit>2</BaggageClaimUnit>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-22T12:50:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-22T12:59:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-22T12:58:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-22T13:00:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType xsi:nil="true"/>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLN</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Arrival">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI593</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>351</FlightNumber>
+          <DepartureAirport CodeContext="3">SOU</DepartureAirport>
+          <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
+          <OriginDate>2020-06-22</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>74</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText>ONB</RemarkFreeText>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Arrival">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+              <BaggageClaimUnit>2</BaggageClaimUnit>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-22T13:10:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-22T13:32:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-22T13:31:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-22T13:33:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT75</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration>GISLK</Registration>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Arrival">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI351</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>901</FlightNumber>
+          <DepartureAirport CodeContext="3">JER</DepartureAirport>
+          <ArrivalAirport CodeContext="3">LGW</ArrivalAirport>
+          <OriginDate>2020-06-23</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>68</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText xsi:nil="true"/>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+            </Resource>
+          </AirportResources>
+          <AirportResources Usage="Actual">
+            <Resource DepartureOrArrival="Departure">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal xsi:nil="true"/>
+              <CheckInInfo>
+                <FirstPosition>17</FirstPosition>
+                <LastPosition>18</LastPosition>
+              </CheckInInfo>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="OFB" CodeContext="2005" TimeType="SCT">2020-06-23T12:20:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT72</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration xsi:nil="true"/>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Departure">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI901</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
+      <FlightLeg>
+        <LegIdentifier>
+          <Airline CodeContext="3">SI</Airline>
+          <FlightNumber>902</FlightNumber>
+          <DepartureAirport CodeContext="3">LGW</DepartureAirport>
+          <ArrivalAirport CodeContext="3">JER</ArrivalAirport>
+          <OriginDate>2020-06-23</OriginDate>
+        </LegIdentifier>
+        <LegData>
+          <PublicStatus xsi:nil="true"/>
+          <OperatingAlliance xsi:nil="true"/>
+          <ServiceType>J</ServiceType>
+          <EstFlightDuration xsi:nil="true"/>
+          <OwnerAirline xsi:nil="true"/>
+          <CabinClass Class="7">
+            <SeatCapacity>68</SeatCapacity>
+          </CabinClass>
+          <RemarkFreeText xsi:nil="true"/>
+          <AirportResources Usage="Planned">
+            <Resource DepartureOrArrival="Arrival">
+              <AirportZone xsi:nil="true"/>
+              <AircraftParkingPosition xsi:nil="true"/>
+              <Runway xsi:nil="true"/>
+              <AircraftTerminal>T1</AircraftTerminal>
+              <BaggageClaimUnit>2</BaggageClaimUnit>
+            </Resource>
+          </AirportResources>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-23T15:25:00.000Z</OperationTime>
+          <AircraftInfo>
+            <AircraftType>AT72</AircraftType>
+            <AircraftSubType xsi:nil="true"/>
+            <Registration xsi:nil="true"/>
+            <TailNumber xsi:nil="true"/>
+            <AgentInfo DepartureOrArrival="Arrival">SA</AgentInfo>
+            <FleetNumber xsi:nil="true"/>
+            <CallSign>BCI902</CallSign>
+          </AircraftInfo>
+        </LegData>
+        <TPA_Extension/>
+      </FlightLeg>
     </IATA_AIDX_FlightLegRS>
   </s:Body>
 </s:Envelope>
