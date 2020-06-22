@@ -717,3 +717,14 @@
     </IATA_AIDX_FlightLegRS>
   </s:Body>
 </s:Envelope>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" Version="13.2">
+      <Errors>
+        <Error Type="911">Error: Error performing application server request: Error message(SQL failed: check EXPORT GET_SQL_DATA_NOBVS1592838426.txt for SQL statement with bindvar replacement.&#13;
+            check EXPORT GET_SQL_DATA_BVS1592838426.txt for SQL statement with bindvars.&#13;
+SQL failed: check EXPORT GET_SQL_DATA_1592838426.txt for SQL statement.) Error Stack, Frame[0]:FUNCTION/GET_SQL_DATA:270, Frame[1]:BPR/WS_AIDX_FLIGHT_RQ:726, Frame[2]:BPR/WS_AIDX_FLIGHT_RQ:131, Frame[3]:WU/WUSCRIPTREQUEST:78, Frame[4]:WU/WUSCRIPTWEBHANDLER:54</Error>
+      </Errors>
+    </IATA_AIDX_FlightLegRS>
+  </s:Body>
+</s:Envelope>

@@ -2,37 +2,12 @@ from templates import *
 from bs4 import BeautifulSoup
 import json
 
-
 class TableGenerator():
-    def __init__(self, template, source, elements, output, airportlookup, statuslookup):
+    def __init__(self, template, source, elements, output):
         self.template = template
         self.source = source
         self.element = elements
         self.output = output
-        self.airportlookup = airportlookup
-        self.statuslookup = statuslookup
-
-    def load_json(self):
-        with open(airportlookup, "r") as read_file:
-            airportlookup = json.load(read_file)
-
-        with open(statuslookup, "r") as read_file:
-            statuslookup = json.load(read_file)
-
-    def lookupairport(self):
-        arrivalairport = row['arrivalairport']
-        self.row['arrivalairport'] = airportlookup[arrivalairport]
-    
-    def rationalisetime(self):
-        time_str = self.row['operationtime']
-        self.row['operationtime'] = time_str[11:16]
-
-    def lookupstatus(self):
-        try:
-            remarkfreetext = self.row['remarkfreetext']
-            self.row['remarkfreetext'] = statuslookup[remarkfreetext]
-        except KeyError:
-            print("No status given")
 
     def read_file(self):
         file = open(self.source, 'r')
@@ -54,9 +29,17 @@ class TableGenerator():
                     print("No value found")
                     row['key'] = " "
 
-            self.lookupairport()
-            self.rationalisetime()
-            self.lookupstatus()
+            arrivalairport = row['arrivalairport']
+            row['arrivalairport'] = airportlookup[arrivalairport]
+
+            time_str = row['operationtime']
+            row['operationtime'] = time_str[11:16]
+
+            try:
+                remarkfreetext = row['remarkfreetext']
+                row['remarkfreetext'] = statuslookup[remarkfreetext]
+            except KeyError:
+                print("No status given")
 
             self.context['table'].append(row)
 
@@ -80,9 +63,14 @@ elements = {'parent': parent, 'child': child }
 airportlookup = 'airportlookup.json'
 statuslookup = 'statuslookup.json'
 
-# time = 
+generator = TableGenerator(template, source, elements, output)
 
-generator = TableGenerator(template, source, elements, output, airportlookup, statuslookup)
+# load json lookup files
+with open(airportlookup, "r") as read_file:
+    airportlookup = json.load(read_file)
+
+with open(statuslookup, "r") as read_file:
+    statuslookup = json.load(read_file)
 
 # xml read/parse
 generator.read_file()

@@ -1,14 +1,9 @@
 from templates import *
 from bs4 import BeautifulSoup
-import json
 
 
-class TableGenerator():
-    def __init__(self, template, source, elements, output, airportlookup, statuslookup):
-        self.template = template
-        self.source = source
-        self.element = elements
-        self.output = output
+class DataImport():
+    def __init__(self, airportlookup, statuslookup):
         self.airportlookup = airportlookup
         self.statuslookup = statuslookup
 
@@ -21,18 +16,26 @@ class TableGenerator():
 
     def lookupairport(self):
         arrivalairport = row['arrivalairport']
-        self.row['arrivalairport'] = airportlookup[arrivalairport]
+        row['arrivalairport'] = airportlookup[arrivalairport]
     
     def rationalisetime(self):
-        time_str = self.row['operationtime']
-        self.row['operationtime'] = time_str[11:16]
+        time_str = row['operationtime']
+        row['operationtime'] = time_str[11:16]
 
     def lookupstatus(self):
         try:
-            remarkfreetext = self.row['remarkfreetext']
-            self.row['remarkfreetext'] = statuslookup[remarkfreetext]
+            remarkfreetext = row['remarkfreetext']
+            row['remarkfreetext'] = statuslookup[remarkfreetext]
         except KeyError:
             print("No status given")
+
+
+class TableGenerator():
+    def __init__(self, template, source, elements, output):
+        self.template = template
+        self.source = source
+        self.element = elements
+        self.output = output
 
     def read_file(self):
         file = open(self.source, 'r')
@@ -41,6 +44,7 @@ class TableGenerator():
     def fetch_records(self):
         soup = BeautifulSoup(self.content, 'lxml')
         self.records = soup.find_all(elements['parent'])
+        print(self.records)
 
     def parse_records(self):
         self.context = {'table': []}
@@ -54,10 +58,13 @@ class TableGenerator():
                     print("No value found")
                     row['key'] = " "
 
-            self.lookupairport()
-            self.rationalisetime()
-            self.lookupstatus()
+<<<<<<< HEAD:2_generate.py
+            lookupairport()
+            rationalisetime()
+            lookupstatus()
 
+=======
+>>>>>>> parent of c90b25b... Tidy up:generate.py
             self.context['table'].append(row)
 
     def render(self):
@@ -68,21 +75,26 @@ class TableGenerator():
         file.write(self.rendered)
         file.close
 
+<<<<<<< HEAD:2_generate.py
+=======
 
+>>>>>>> parent of c90b25b... Tidy up:generate.py
 
-source = 'flightinfo.xml'
+source = 'departures.xml'
 output = 'output/index.html'
 template = 'index.html'
-parent = 'flightleg'
-child = ['callsign', 'arrivalairport', 'operationtime', 'remarkfreetext']
+parent = 'record'
+child = ['flight', 'destination', 'std', 'status']
 elements = {'parent': parent, 'child': child }
 
+<<<<<<< HEAD:2_generate.py
 airportlookup = 'airportlookup.json'
 statuslookup = 'statuslookup.json'
 
-# time = 
 
-generator = TableGenerator(template, source, elements, output, airportlookup, statuslookup)
+=======
+>>>>>>> parent of c90b25b... Tidy up:generate.py
+generator = TableGenerator(template, source, elements, output)
 
 # xml read/parse
 generator.read_file()

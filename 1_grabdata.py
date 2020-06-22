@@ -18,6 +18,6 @@ flight_xml = etree.tostring(history.last_received["envelope"], encoding="unicode
 
 print(flight_xml)
 
-f = open("flightinfo.xml", "w")
+f = open("flightinfo.xml", "a")
 f.write(flight_xml)
 f.close()
