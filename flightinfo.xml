@@ -466,4 +466,23 @@
          </FlightLeg>
       </IATA_AIDX_FlightLegRS>
    </s:Body>
+</s:Envelope><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" Version="13.2">
+      <Success/>
+      <Warnings>
+        <Warning Type="911">Warning: Update Refresh not possible at this time please try in 11.7441836 seconds.</Warning>
+      </Warnings>
+    </IATA_AIDX_FlightLegRS>
+  </s:Body>
+</s:Envelope>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" Version="13.2">
+      <Success/>
+      <Warnings>
+        <Warning Type="911">Warning: Update Refresh not possible at this time please try in 29.5265784 seconds.</Warning>
+      </Warnings>
+    </IATA_AIDX_FlightLegRS>
+  </s:Body>
 </s:Envelope>

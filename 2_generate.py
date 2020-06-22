@@ -4,10 +4,11 @@ import json
 
 
 class DataImport():
-    def __init__(self):
-        #
+    def __init__(self, airportlookup, statuslookup):
+        self.airportlookup = airportlookup
+        self.statuslookup = statuslookup
 
-    def load_json(self)
+    def load_json(self):
         with open(airportlookup, "r") as read_file:
             airportlookup = json.load(read_file)
 
@@ -81,9 +82,6 @@ elements = {'parent': parent, 'child': child }
 
 airportlookup = 'airportlookup.json'
 statuslookup = 'statuslookup.json'
-
-
-# load json lookup files
 
 
 generator = TableGenerator(template, source, elements, output)
