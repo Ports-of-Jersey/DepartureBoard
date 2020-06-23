@@ -118,6 +118,10 @@ table.departures thead th    {
   border-bottom: 4px solid white;
 }
 
+.airborne {
+  color: lime;
+}
+
 .gateCalled {
   color: lime;
 }

@@ -17,6 +17,8 @@
         </div>
 
         <h1><span>Departures</span></h1>
+
+        <div></div>
       </header>
 
         <table class="departures" id="departures-table">
@@ -29,13 +31,15 @@
           <tbody>
           {% for row in table %}
             <tr>
-              <td>{{ row.callsign }}</td>
+              <td>{{ row.airline }}{{ row.flightnumber }}</td>
               <td>{{ row.arrivalairport }}</td>
               <td>{{ row.operationtime }}</td>
-              {% if 'go to gate' in row.status|lower %}
-              <td class="gateCalled" %}>{{ row.remarkfreetext }}</td>
-              {% elif row.status|lower == "cancelled" %}
-              <td class="cancelled">{{ row.remarkfreetext }}</td>
+              {% if 'airborne at' in row.remarkfreetext|lower %}
+              <td class = "airborne" >{{ row.remarkfreetext }} {{ row.operationtime }}</td>
+              {% elif 'go to gate' in row.remarkfreetext|lower %}
+              <td class = "gateCalled" >{{ row.remarkfreetext }} {{ row.PassengerGate }}</td>
+              {% elif row.remarkfreetext|lower == "cancelled" %}
+              <td class = "cancelled">{{ row.remarkfreetext }}</td>
               {% else %}
               <td>{{ row.remarkfreetext }}</td>
               {% endif %}

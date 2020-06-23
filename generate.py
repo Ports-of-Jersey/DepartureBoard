@@ -57,7 +57,7 @@ source = 'flightinfo.xml'
 output = 'output/index.html'
 template = 'index.html'
 parent = 'flightleg'
-child = ['callsign', 'arrivalairport', 'operationtime', 'remarkfreetext']
+child = ['airline', 'flightnumber', 'callsign', 'arrivalairport', 'operationtime', 'remarkfreetext', 'passengergate']
 elements = {'parent': parent, 'child': child }
 
 airportlookup = 'airportlookup.json'
@@ -80,4 +80,3 @@ generator.parse_records()
 # html template parse/write
 generator.render()
 generator.write()
-
