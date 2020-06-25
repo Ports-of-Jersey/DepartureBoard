@@ -1,6 +1,9 @@
 from templates import *
 from bs4 import BeautifulSoup
+from datetime import datetime, timedelta
 import json
+
+BST = True
 
 class TableGenerator():
     def __init__(self, template, source, elements, output):
@@ -18,6 +21,24 @@ class TableGenerator():
         self.records = soup.find_all(elements['parent'])
 
     def parse_records(self):
+
+        def status_times(timemessage, operationqualifier, timetype):
+            try:
+                row[timemessage] = record.find('operationtime', operationqualifier=operationqualifier, timetype=timetype).get_text()
+            
+                date_time_str = row[timemessage]
+                date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%dT%H:%M:%S.%fZ')
+                if BST == True:
+                    date_time_obj = date_time_obj + timedelta(hours = 1)
+                else:
+                    date_time_obj = date_time_obj
+                
+                row[timemessage] = date_time_obj.strftime("%H:%M")
+
+            except AttributeError:
+                print("No value found for " + timemessage)
+                row[timemessage] = " "
+
         self.context = {'table': []}
 
         for record in self.records:
@@ -32,16 +53,20 @@ class TableGenerator():
             arrivalairport = row['arrivalairport']
             row['arrivalairport'] = airportlookup[arrivalairport]
 
-            time_str = row['operationtime']
-            row['operationtime'] = time_str[11:16]
-
             try:
                 remarkfreetext = row['remarkfreetext']
                 row['remarkfreetext'] = statuslookup[remarkfreetext]
             except KeyError:
                 print("No status given")
 
-            self.context['table'].append(row)
+            status_times('airbornetime', 'TKO', 'ACT')
+            status_times('estimatedtime', 'OFB', 'EST')
+            status_times('scheduledtime', 'OFB', 'SCT')
+
+            if row['departureairport'] == 'JER':
+                self.context['table'].append(row)
+            else:
+                pass
 
     def render(self):
         self.rendered = get_template("index.html").render(self.context)
@@ -52,12 +77,11 @@ class TableGenerator():
         file.close
 
 
-
 source = 'flightinfo.xml'
 output = 'output/index.html'
 template = 'index.html'
 parent = 'flightleg'
-child = ['airline', 'flightnumber', 'callsign', 'arrivalairport', 'operationtime', 'remarkfreetext', 'passengergate']
+child = ['airline', 'flightnumber', 'departureairport', 'callsign', 'arrivalairport', 'operationtime', 'remarkfreetext', 'passengergate']
 elements = {'parent': parent, 'child': child }
 
 airportlookup = 'airportlookup.json'

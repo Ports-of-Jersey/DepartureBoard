@@ -118,15 +118,15 @@ table.departures thead th    {
   border-bottom: 4px solid white;
 }
 
-.airborne {
+.status1 {
   color: lime;
 }
 
-.gateCalled {
-  color: lime;
+.status2 {
+  color: yellow
 }
 
-.cancelled {
+.status3 {
   color: red;
 }
 

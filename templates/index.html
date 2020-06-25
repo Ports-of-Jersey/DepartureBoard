@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="15">
-    <title>Departures Board</title>
+    <title>Jersey Airport Departures</title>
     <link rel="stylesheet" href="static/index.css">
   </head>
 
@@ -32,14 +32,23 @@
           {% for row in table %}
             <tr>
               <td>{{ row.airline }}{{ row.flightnumber }}</td>
+
               <td>{{ row.arrivalairport }}</td>
-              <td>{{ row.operationtime }}</td>
+
+              <td>{{ row.scheduledtime }}</td>
+              
               {% if 'airborne at' in row.remarkfreetext|lower %}
-              <td class = "airborne" >{{ row.remarkfreetext }} {{ row.operationtime }}</td>
+              <td class="status1">{{ row.remarkfreetext }} {{ row.airbornetime }}</td>
+              {% elif 'approx' in row.remarkfreetext|lower %}
+              <td class="status1">{{ row.remarkfreetext }} {{ row.estimatedtime }}</td>
+              {% elif 'delayed' in row.remarkfreetext|lower %}
+              <td class="status2">{{ row.remarkfreetext }} {{ row.estimatedtime }}</td>
+              {% elif 'estimated' in row.remarkfreetext|lower %}
+              <td class="status1">{{ row.remarkfreetext }} {{ row.estimatedtime }}</td>
               {% elif 'go to gate' in row.remarkfreetext|lower %}
-              <td class = "gateCalled" >{{ row.remarkfreetext }} {{ row.PassengerGate }}</td>
-              {% elif row.remarkfreetext|lower == "cancelled" %}
-              <td class = "cancelled">{{ row.remarkfreetext }}</td>
+              <td class="status1">{{ row.remarkfreetext }} {{ row.passengergate }}</td>
+              {% elif 'cancelled' in row.remarkfreetext|lower %}
+              <td class="status3">{{ row.remarkfreetext }}</td>
               {% else %}
               <td>{{ row.remarkfreetext }}</td>
               {% endif %}
