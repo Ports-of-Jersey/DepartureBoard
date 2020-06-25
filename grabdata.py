@@ -2,10 +2,10 @@ from zeep.plugins import HistoryPlugin
 from zeep import Client
 from lxml import etree
 
-wsdl_url = 'https://podbwebservice.ports.je:8443/AIDXQueryFlights/Services/RequestFlightService.svc?wsdl'
+wsdl_url = 'https://podbwebservice.ports.je/AIDXQueryFlights/Services/RequestFlightService.svc?wsdl'
 service = 'RequestFlightService'
 port = 'BasicHttpsBinding_IRequestFlightService'
-userID = 'POJWebInternalTest456'
+userID = 'POJWebInternal456'
 
 history = HistoryPlugin()
 
