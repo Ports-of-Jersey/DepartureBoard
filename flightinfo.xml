@@ -1,6 +1,6 @@
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" TimeStamp="2020-06-25T17:00:44.4359066+01:00" Version="13.2">
+    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" TimeStamp="2020-06-25T17:17:57.4324209+01:00" Version="13.2">
       <Success/>
       <FlightLeg>
         <LegIdentifier>
