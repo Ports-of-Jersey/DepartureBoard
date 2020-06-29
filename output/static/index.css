@@ -9,7 +9,7 @@
 
 html, body {
   font-size: 62.5%;
-  font-family: 'Calibri', 'Open Sans', 'Trebuchet MS';
+  font-family: 'Calibri', 'Open Sans', 'sans-serif', 'Trebuchet MS';
 }
 
 body {
@@ -53,13 +53,13 @@ h2 {
   height: 10vh;
   min-height: 75px;
   margin: 0 auto;
-  padding: 0.8em;
+  padding: 0.7em;
 }
 
 .departures-page header .logo {
-  max-width: 20%;
+  max-width: 15%;
   height: 100%;
-  margin-right: 0.8em;
+  margin-right: 0.6em;
 }
 
 .departures-page header .pojlogo {
