@@ -57,11 +57,13 @@ h2 {
 }
 
 .departures-page header .logo {
+  max-width: 20%;
   height: 100%;
   margin-right: 1em;
 }
 
 .departures-page header .pojlogo {
+  max-width: 20%;
   height: 70%;
   margin-left: auto;
   background-color: white;
