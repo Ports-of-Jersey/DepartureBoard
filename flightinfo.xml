@@ -1,6 +1,6 @@
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" TimeStamp="2020-06-29T15:39:34.1741888+01:00" Version="13.2">
+    <IATA_AIDX_FlightLegRS xmlns="http://www.iata.org/IATA/2007/00" TimeStamp="2020-06-29T16:03:33.5106809+01:00" Version="13.2">
       <Success/>
       <FlightLeg>
         <LegIdentifier>
@@ -243,7 +243,7 @@
           <CabinClass Class="7">
             <SeatCapacity>74</SeatCapacity>
           </CabinClass>
-          <RemarkFreeText>ARR</RemarkFreeText>
+          <RemarkFreeText>ONB</RemarkFreeText>
           <AirportResources Usage="Planned">
             <Resource DepartureOrArrival="Arrival">
               <AirportZone xsi:nil="true"/>
@@ -256,6 +256,7 @@
           <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="SCT">2020-06-29T13:10:00.000Z</OperationTime>
           <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="EST">2020-06-29T14:30:00.000Z</OperationTime>
           <OperationTime OperationQualifier="TDN" CodeContext="2005" TimeType="ACT">2020-06-29T14:33:00.000Z</OperationTime>
+          <OperationTime OperationQualifier="ONB" CodeContext="2005" TimeType="ACT">2020-06-29T14:39:00.000Z</OperationTime>
           <AircraftInfo>
             <AircraftType>AT75</AircraftType>
             <AircraftSubType xsi:nil="true"/>

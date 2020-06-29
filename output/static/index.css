@@ -51,13 +51,14 @@ h2 {
   align-items: left;
   justify-content: left;
   height: 10vh;
-  min-height: 80px;
+  min-height: 120px;
   margin: 0 auto;
   padding: 1em;
 }
 
 .departures-page header .logo {
   height: 100%;
+  margin-right: 1em;
 }
 
 .departures-page header .pojlogo {
@@ -70,7 +71,6 @@ h2 {
   display: block;
   height: 100%;
   border-radius: 0.5em;
-  margin-right: 1em;
   object-fit: contain;
 }
 
