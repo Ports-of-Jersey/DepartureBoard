@@ -18,6 +18,10 @@
 
         <h1><span>Departures</span></h1>
 
+        <div class="pojlogo">
+          <img src="static/portsofjersey.png" alt="Ports of Jersey Logo">
+        </div>
+
         <div></div>
       </header>
 
@@ -38,13 +42,21 @@
               <td>{{ row.scheduledtime }}</td>
               
               {% if 'airborne at' in row.remarkfreetext|lower %}
-              <td class="status1">{{ row.remarkfreetext }} {{ row.airbornetime }}</td>
+              <td class="status0">{{ row.remarkfreetext }} {{ row.airbornetime }}</td>
               {% elif 'approx' in row.remarkfreetext|lower %}
               <td class="status1">{{ row.remarkfreetext }} {{ row.estimatedtime }}</td>
               {% elif 'delayed' in row.remarkfreetext|lower %}
               <td class="status2">{{ row.remarkfreetext }} {{ row.estimatedtime }}</td>
               {% elif 'estimated' in row.remarkfreetext|lower %}
               <td class="status1">{{ row.remarkfreetext }} {{ row.estimatedtime }}</td>
+              {% elif 'final call' in row.remarkfreetext|lower %}
+              <td class="status2">{{ row.remarkfreetext }} {{ row.passemgergate }}</td>
+              {% elif 'gate closed' in row.remarkfreetext|lower %}
+              <td class="status2">{{ row.remarkfreetext }}</td>
+              {% elif 'gate info at' in row.remarkfreetext|lower %}
+              <td class="status0">{{ row.remarkfreetext }} {{ row.gatetime }}</td>
+              {% elif 'gate info shortly' in row.remarkfreetext|lower %}
+              <td class="status1">{{ row.remarkfreetext }}</td>
               {% elif 'go to gate' in row.remarkfreetext|lower %}
               <td class="status1">{{ row.remarkfreetext }} {{ row.passengergate }}</td>
               {% elif 'cancelled' in row.remarkfreetext|lower %}

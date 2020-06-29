@@ -1,8 +1,5 @@
 import os
 import time
-from http import server
-
-http.server(1234)
 
 while True:
     os.system('python grabdata.py')

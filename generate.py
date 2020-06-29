@@ -33,12 +33,28 @@ class TableGenerator():
                 else:
                     date_time_obj = date_time_obj
                 
-                row[timemessage] = date_time_obj.strftime("%H:%M")
+                row[timemessage] = date_time_obj.strftime('%H:%M')
 
             except AttributeError:
                 print("No value found for " + timemessage)
                 row[timemessage] = " "
 
+        def gate_times(scheduledtime):
+            date_time_str = row['scheduledtime']
+
+            try:
+                gatetime = gatetimeslookup[row['airline']] / 60
+            except KeyError:
+                gatetime = 0.5
+
+            try:
+                date_time_obj = datetime.strptime(date_time_str, '%H:%M')
+                date_time_obj = date_time_obj + timedelta(hours = -gatetime)
+                row['gatetime'] = date_time_obj.strftime('%H:%M')
+            except ValueError:
+                pass
+
+    # parse_records    
         self.context = {'table': []}
 
         for record in self.records:
@@ -48,7 +64,7 @@ class TableGenerator():
                     row[key] = record.find(key).get_text()
                 except AttributeError:
                     print("No value found")
-                    row['key'] = " "
+                    row[key] = " "
 
             arrivalairport = row['arrivalairport']
             row['arrivalairport'] = airportlookup[arrivalairport]
@@ -59,9 +75,16 @@ class TableGenerator():
             except KeyError:
                 print("No status given")
 
+            if row['remarkfreetext'] == 'Go to gate' and row['passengergate'] == " ":
+                row['remarkfreetext'] = 'Gate info shortly'
+            else:
+                pass
+
             status_times('airbornetime', 'TKO', 'ACT')
             status_times('estimatedtime', 'OFB', 'EST')
             status_times('scheduledtime', 'OFB', 'SCT')
+
+            gate_times('scheduledtime')
 
             if row['departureairport'] == 'JER':
                 self.context['table'].append(row)
@@ -84,17 +107,27 @@ parent = 'flightleg'
 child = ['airline', 'flightnumber', 'departureairport', 'callsign', 'arrivalairport', 'operationtime', 'remarkfreetext', 'passengergate']
 elements = {'parent': parent, 'child': child }
 
+# configs = ['airportlookup', 'statuslookup', 'gatetimeslookup']
 airportlookup = 'airportlookup.json'
 statuslookup = 'statuslookup.json'
+gatetimeslookup = 'gatetimeslookup.json'
 
 generator = TableGenerator(template, source, elements, output)
 
 # load json lookup files
+""" for config in configs:
+    configfile = config + '.json'
+    with open(configfile, "r") as read_file:
+        config = json.load(read_file) """
+
 with open(airportlookup, "r") as read_file:
     airportlookup = json.load(read_file)
 
 with open(statuslookup, "r") as read_file:
     statuslookup = json.load(read_file)
+
+with open(gatetimeslookup, "r") as read_file:
+    gatetimeslookup = json.load(read_file)
 
 # xml read/parse
 generator.read_file()

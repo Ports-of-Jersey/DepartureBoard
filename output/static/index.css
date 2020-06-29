@@ -58,14 +58,19 @@ h2 {
 
 .departures-page header .logo {
   height: 100%;
-  margin-right: 1em;
+}
+
+.departures-page header .pojlogo {
+  height: 70%;
+  margin-left: auto;
+  background-color: white;
 }
 
 .departures-page header img {
   display: block;
   height: 100%;
-  /* width: 100%; */
   border-radius: 0.5em;
+  margin-right: 1em;
   object-fit: contain;
 }
 
@@ -114,6 +119,10 @@ table.departures thead th    {
   background: #646464;
   border-top: 4px solid white;
   border-bottom: 4px solid white;
+}
+
+.status0 {
+  color: white;
 }
 
 .status1 {
