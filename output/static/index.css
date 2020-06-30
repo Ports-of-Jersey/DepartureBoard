@@ -53,20 +53,13 @@ h2 {
   height: 10vh;
   min-height: 75px;
   margin: 0 auto;
-  padding: 0.7em;
+  padding: 1em;
 }
 
 .departures-page header .logo {
   max-width: 15%;
   height: 100%;
-  margin-right: 0.6em;
-}
-
-.departures-page header .pojlogo {
-  max-width: 20%;
-  height: 70%;
-  margin-left: auto;
-  background-color: white;
+  margin-right: 1em;
 }
 
 .departures-page header img {
