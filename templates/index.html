@@ -46,8 +46,8 @@
               <td class="status2">{{ row.remarkfreetext }} {{ row.estimatedtime }}</td>
               {% elif 'estimated' in row.remarkfreetext|lower %}
               <td class="status1">{{ row.remarkfreetext }} {{ row.estimatedtime }}</td>
-              {% elif 'final call' in row.remarkfreetext|lower %}
-              <td class="status2">{{ row.remarkfreetext }} {{ row.passemgergate }}</td>
+              {% elif 'final call gate' in row.remarkfreetext|lower %}
+              <td class="status2">{{ row.remarkfreetext }} {{ row.passengergate }}</td>
               {% elif 'gate closed' in row.remarkfreetext|lower %}
               <td class="status2">{{ row.remarkfreetext }}</td>
               {% elif 'gate info at' in row.remarkfreetext|lower %}

@@ -75,8 +75,8 @@ class TableGenerator():
             except KeyError:
                 print("No status given")
 
-            if row['remarkfreetext'] == 'Go to gate' and row['passengergate'] == " ":
-                row['remarkfreetext'] = 'Gate info shortly'
+            if row['remarkfreetext'] == 'Go to Gate' and row['passengergate'] == " ":
+                row['remarkfreetext'] = 'Gate Info Shortly'
             else:
                 pass
 
