@@ -86,7 +86,7 @@ class TableGenerator():
 
             gate_times('scheduledtime')
 
-            if row['departureairport'] == 'JER':
+            if row['departureairport'] == 'JER' and row['origindate'] == effectivedate:
                 self.context['table'].append(row)
             else:
                 pass
@@ -104,7 +104,7 @@ source = 'flightinfo.xml'
 output = 'output/index.html'
 template = 'index.html'
 parent = 'flightleg'
-child = ['airline', 'flightnumber', 'departureairport', 'callsign', 'arrivalairport', 'operationtime', 'remarkfreetext', 'passengergate']
+child = ['airline', 'flightnumber', 'departureairport', 'arrivalairport', 'origindate', 'operationtime', 'remarkfreetext', 'passengergate']
 elements = {'parent': parent, 'child': child }
 
 # configs = ['airportlookup', 'statuslookup', 'gatetimeslookup']
@@ -112,7 +112,8 @@ airportlookup = 'airportlookup.json'
 statuslookup = 'statuslookup.json'
 gatetimeslookup = 'gatetimeslookup.json'
 
-generator = TableGenerator(template, source, elements, output)
+effectivedate = datetime.strftime(datetime.now(), '%Y-%m-%d')
+
 
 # load json lookup files
 """ for config in configs:
@@ -128,6 +129,9 @@ with open(statuslookup, "r") as read_file:
 
 with open(gatetimeslookup, "r") as read_file:
     gatetimeslookup = json.load(read_file)
+
+
+generator = TableGenerator(template, source, elements, output)
 
 # xml read/parse
 generator.read_file()

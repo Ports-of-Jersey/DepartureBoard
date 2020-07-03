@@ -58,8 +58,8 @@
               <td class="status1">{{ row.remarkfreetext }} {{ row.passengergate }}</td>
               {% elif 'cancelled' in row.remarkfreetext|lower %}
               <td class="status3">{{ row.remarkfreetext }}</td>
-              {% elif 'EZY' in row.airline|lower %}
-              <td class="status2">See EasyJet app for info</td>
+              {% elif 'ezy' in row.airline|lower %}
+              <td class="status0">Info on EasyJet App</td>
               {% else %}
               <td>{{ row.remarkfreetext }}</td>
               {% endif %}
