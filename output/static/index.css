@@ -116,22 +116,6 @@ table.departures thead th    {
   border-bottom: 4px solid white;
 }
 
-.status0 {
-  color: white;
-}
-
-.status1 {
-  color: lime;
-}
-
-.status2 {
-  color: yellow
-}
-
-.status3 {
-  color: red;
-}
-
 tr:nth-child(even) {
   background-color: #414141;
 }

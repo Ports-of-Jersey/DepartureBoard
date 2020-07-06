@@ -39,6 +39,16 @@ class TableGenerator():
                 print("No value found for " + timemessage)
                 row[timemessage] = " "
 
+        def time_delta(operationtime):
+            timenow = datetime.now()
+            timestd = datetime.strptime(operationtime, '%Y-%m-%dT%H:%M:%S.%fZ')
+
+            delta = timenow - timestd
+
+            deltaminute = (delta.seconds % 3600) // 60
+
+            print(deltaminute)
+
         def gate_times(scheduledtime):
             date_time_str = row['scheduledtime']
 
@@ -54,6 +64,29 @@ class TableGenerator():
             except ValueError:
                 pass
 
+        def lookup_airport(airportlookup):
+            arrivalairport = row['arrivalairport']
+            row['arrivalairport'] = airportlookup[arrivalairport]
+
+        def lookup_status(statuslookup):
+            try:
+                remarkfreetext = row['remarkfreetext']
+                additionalfield = statuslookup[remarkfreetext][2]
+                row['remarkfreetext'] = statuslookup[remarkfreetext][0] + " " + row[additionalfield]
+                row['statuscolor'] = statuslookup[remarkfreetext][1]
+            except KeyError:
+                if row['airline'] == 'EZY':
+                    row['remarkfreetext'] = "Info on EasyJet App"
+                else:
+                    print("No status given")
+            except IndexError:
+                row['remarkfreetext'] = statuslookup[remarkfreetext][0]
+
+            if row['remarkfreetext'] == 'Go to Gate' and row['passengergate'] == " ":
+                row['remarkfreetext'] = 'Gate Info Shortly'
+            else:
+                pass
+
     # parse_records    
         self.context = {'table': []}
 
@@ -66,30 +99,21 @@ class TableGenerator():
                     print("No value found")
                     row[key] = " "
 
-            arrivalairport = row['arrivalairport']
-            row['arrivalairport'] = airportlookup[arrivalairport]
-
-            try:
-                remarkfreetext = row['remarkfreetext']
-                row['remarkfreetext'] = statuslookup[remarkfreetext]
-            except KeyError:
-                print("No status given")
-
-            if row['remarkfreetext'] == 'Go to Gate' and row['passengergate'] == " ":
-                row['remarkfreetext'] = 'Gate Info Shortly'
-            else:
-                pass
-
             status_times('airbornetime', 'TKO', 'ACT')
             status_times('estimatedtime', 'OFB', 'EST')
             status_times('scheduledtime', 'OFB', 'SCT')
 
             gate_times('scheduledtime')
+            time_delta(row['operationtime'])
 
             if row['departureairport'] == 'JER' and row['origindate'] == effectivedate:
                 self.context['table'].append(row)
             else:
                 pass
+
+            lookup_airport(airportlookup)
+            lookup_status(statuslookup)
+
 
     def render(self):
         self.rendered = get_template("index.html").render(self.context)
