@@ -43,11 +43,12 @@ class TableGenerator():
             timenow = datetime.now()
             timestd = datetime.strptime(operationtime, '%Y-%m-%dT%H:%M:%S.%fZ')
 
-            delta = timenow - timestd
-
-            deltaminute = (delta.seconds % 3600) // 60
-
-            print(deltaminute)
+            if timestd > timenow:
+                delta = timestd - timenow
+                row['timedelta'] = (delta.seconds / 60) // 1
+            else:
+                delta = timenow - timestd
+                row['timedelta'] = -(delta.seconds / 60) // 1
 
         def gate_times(scheduledtime):
             date_time_str = row['scheduledtime']
@@ -74,6 +75,7 @@ class TableGenerator():
                 additionalfield = statuslookup[remarkfreetext][2]
                 row['remarkfreetext'] = statuslookup[remarkfreetext][0] + " " + row[additionalfield]
                 row['statuscolor'] = statuslookup[remarkfreetext][1]
+                print(row[additionalfield])
             except KeyError:
                 if row['airline'] == 'EZY':
                     row['remarkfreetext'] = "Info on EasyJet App"
@@ -82,7 +84,9 @@ class TableGenerator():
             except IndexError:
                 row['remarkfreetext'] = statuslookup[remarkfreetext][0]
 
-            if row['remarkfreetext'] == 'Go to Gate' and row['passengergate'] == " ":
+            print("w" + row['remarkfreetext'] + "W")
+
+            if row['remarkfreetext'] == 'Go to Gate  ' and row['passengergate'] == " ":
                 row['remarkfreetext'] = 'Gate Info Shortly'
             else:
                 pass
@@ -106,7 +110,14 @@ class TableGenerator():
             gate_times('scheduledtime')
             time_delta(row['operationtime'])
 
-            if row['departureairport'] == 'JER' and row['origindate'] == effectivedate:
+            # Rules for which flights are displayed
+            displayrules = [
+                row['departureairport'] == 'JER',
+                row['origindate'] == effectivedate,
+                360 > row['timedelta'] > -90
+                ]
+
+            if all(displayrules):
                 self.context['table'].append(row)
             else:
                 pass
