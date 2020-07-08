@@ -75,7 +75,6 @@ class TableGenerator():
                 additionalfield = statuslookup[remarkfreetext][2]
                 row['remarkfreetext'] = statuslookup[remarkfreetext][0] + " " + row[additionalfield]
                 row['statuscolor'] = statuslookup[remarkfreetext][1]
-                print(row[additionalfield])
             except KeyError:
                 if row['airline'] == 'EZY':
                     row['remarkfreetext'] = "Info on EasyJet App"
@@ -84,8 +83,6 @@ class TableGenerator():
             except IndexError:
                 row['remarkfreetext'] = statuslookup[remarkfreetext][0]
 
-            print("w" + row['remarkfreetext'] + "W")
-
             if row['remarkfreetext'] == 'Go to Gate  ' and row['passengergate'] == " ":
                 row['remarkfreetext'] = 'Gate Info Shortly'
             else:
@@ -93,6 +90,7 @@ class TableGenerator():
 
     # parse_records    
         self.context = {'table': []}
+        flightcount = 0
 
         for record in self.records:
             row = {}
@@ -119,11 +117,14 @@ class TableGenerator():
 
             if all(displayrules):
                 self.context['table'].append(row)
+                flightcount += 1
             else:
                 pass
 
             lookup_airport(airportlookup)
             lookup_status(statuslookup)
+            
+        print(flightcount,"valid flights to display")
 
 
     def render(self):
