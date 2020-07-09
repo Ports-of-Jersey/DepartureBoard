@@ -14,6 +14,7 @@
 	"GTG" : ["Go to Gate", "lime", "passengergate"],
 	"NXT" : ["Next Information at", "white"],
 	"OFB" : ["Departed", "white"],
+	"ONB" : ["Landed at", "white"],
 	"ONT" : ["On Time", "white"],
 	"RSC" : ["Rescheduled", "red"],
 	"RST" : [" ", "white"]

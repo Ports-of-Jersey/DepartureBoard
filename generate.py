@@ -27,21 +27,22 @@ class TableGenerator():
                 row[timemessage] = record.find('operationtime', operationqualifier=operationqualifier, timetype=timetype).get_text()
             
                 date_time_str = row[timemessage]
-                date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%dT%H:%M:%S.%fZ')
-                if BST == True:
-                    date_time_obj = date_time_obj + timedelta(hours = 1)
+                if BST:
+                    date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%dT%H:%M:%S.%fZ') + timedelta(hours = 1)
                 else:
-                    date_time_obj = date_time_obj
+                    date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%dT%H:%M:%S.%fZ')
                 
                 row[timemessage] = date_time_obj.strftime('%H:%M')
 
             except AttributeError:
-                print("No value found for " + timemessage)
                 row[timemessage] = " "
 
         def time_delta(operationtime):
             timenow = datetime.now()
-            timestd = datetime.strptime(operationtime, '%Y-%m-%dT%H:%M:%S.%fZ')
+            if BST:
+                timestd = datetime.strptime(operationtime, '%Y-%m-%dT%H:%M:%S.%fZ') + timedelta(hours = 1)
+            else:
+                timestd = datetime.strptime(operationtime, '%Y-%m-%dT%H:%M:%S.%fZ')
 
             if timestd > timenow:
                 delta = timestd - timenow
@@ -72,17 +73,19 @@ class TableGenerator():
         def lookup_status(statuslookup):
             try:
                 remarkfreetext = row['remarkfreetext']
-                additionalfield = statuslookup[remarkfreetext][2]
-                row['remarkfreetext'] = statuslookup[remarkfreetext][0] + " " + row[additionalfield]
-                row['statuscolor'] = statuslookup[remarkfreetext][1]
+                try:
+                    additionalfield = statuslookup[remarkfreetext][2]
+                    row['remarkfreetext'] = statuslookup[remarkfreetext][0] + " " + row[additionalfield]
+                    row['statuscolor'] = statuslookup[remarkfreetext][1]
+                except IndexError:
+                    row['remarkfreetext'] = statuslookup[remarkfreetext][0]
+                    row['statuscolor'] = statuslookup[remarkfreetext][1]
+                    print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No additional field specified")
             except KeyError:
                 if row['airline'] == 'EZY':
                     row['remarkfreetext'] = "Info on EasyJet App"
-                else:
-                    print("No status given")
-            except IndexError:
-                row['remarkfreetext'] = statuslookup[remarkfreetext][0]
-
+                    print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value found for remarkfreetext")
+        
             if row['remarkfreetext'] == 'Go to Gate  ' and row['passengergate'] == " ":
                 row['remarkfreetext'] = 'Gate Info Shortly'
             else:
@@ -98,8 +101,8 @@ class TableGenerator():
                 try:
                     row[key] = record.find(key).get_text()
                 except AttributeError:
-                    print("No value found")
                     row[key] = " "
+                    print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value found for",key)
 
             status_times('airbornetime', 'TKO', 'ACT')
             status_times('estimatedtime', 'OFB', 'EST')
@@ -124,7 +127,7 @@ class TableGenerator():
             lookup_airport(airportlookup)
             lookup_status(statuslookup)
             
-        print(flightcount,"valid flights to display")
+        print("[",datetime.now(),"] -",flightcount,"valid flight(s) to display")
 
 
     def render(self):
