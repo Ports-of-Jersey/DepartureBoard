@@ -83,9 +83,11 @@ class TableGenerator():
                     print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No additional field specified")
             except KeyError:
                 print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value found for remarkfreetext")
-        
-            if row['airline'] == 'EZY':
-                row['status2'] = "Info on EasyJet App"
+
+            try: row['status2']
+            except KeyError:
+                if row['airline'] == 'EZY':
+                    row['status2'] = "Info on EasyJet App"
 
             try:
                 if row['status1'] == 'Cancelled':
@@ -122,8 +124,8 @@ class TableGenerator():
             # Rules for which flights are displayed
             displayrules = [
                 row['departureairport'] == 'JER',
-                # row['origindate'] == effectivedate,
-                # 360 > row['timedelta'] > -90
+                row['origindate'] == effectivedate,
+                360 > row['timedelta'] > -90
                 ]
 
             if all(displayrules):

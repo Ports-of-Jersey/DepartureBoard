@@ -14,13 +14,17 @@ setDate();
 var altStatus = setInterval(switchStatus, 4000);
 
 function switchStatus() {
-  var x = document.getElementById("status1");
-  var y = document.getElementById("status2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    y.style.display = "none";
-  } else {
-    x.style.display = "none";
-    y.style.display = "block";
+  var x = document.getElementsByClassName("status1");
+  var y = document.getElementsByClassName("status2");
+  var i = 0
+  while (i < x.length) {
+    if (x[i].style.display === "none") {
+      x[i].style.display = "block";
+      y[i].style.display = "none";
+    } else {
+      x[i].style.display = "none";
+      y[i].style.display = "block";
+    }
+    i ++;
   }
 }
