@@ -1,7 +1,7 @@
 {
 	"" : ["Gate Info at", "white", "gatetime"],
 	"APP" : ["Approx", "lime", "estimatedtime"],
-	"CAN" : ["Cancelled / Go to Baggage Reclaim", "red"],
+	"CAN" : ["Cancelled", "red"],
 	"CHC" : ["Desk Closed", "white"],
 	"CHK" : ["Gate Info at", "white", "gatetime"],
 	"DEP" : ["Airborne at", "white", "airbornetime"],

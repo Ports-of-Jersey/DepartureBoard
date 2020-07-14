@@ -75,21 +75,29 @@ class TableGenerator():
                 remarkfreetext = row['remarkfreetext']
                 try:
                     additionalfield = statuslookup[remarkfreetext][2]
-                    row['remarkfreetext'] = statuslookup[remarkfreetext][0] + " " + row[additionalfield]
-                    row['statuscolor'] = statuslookup[remarkfreetext][1]
+                    row['status1'] = statuslookup[remarkfreetext][0] + " " + row[additionalfield]
+                    row['statuscolor1'] = statuslookup[remarkfreetext][1]
                 except IndexError:
-                    row['remarkfreetext'] = statuslookup[remarkfreetext][0]
-                    row['statuscolor'] = statuslookup[remarkfreetext][1]
+                    row['status1'] = statuslookup[remarkfreetext][0]
+                    row['statuscolor1'] = statuslookup[remarkfreetext][1]
                     print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No additional field specified")
             except KeyError:
-                if row['airline'] == 'EZY':
-                    row['remarkfreetext'] = "Info on EasyJet App"
-                    print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value found for remarkfreetext")
+                print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value found for remarkfreetext")
         
-            if row['remarkfreetext'] == 'Go to Gate  ' and row['passengergate'] == " ":
-                row['remarkfreetext'] = 'Gate Info Shortly'
-            else:
+            if row['airline'] == 'EZY':
+                row['status2'] = "Info on EasyJet App"
+
+            try:
+                if row['status1'] == 'Cancelled':
+                    row['status2'] = 'Go to Bagage Reclaim'
+                    row['statuscolor2'] = 'red'
+
+                if row['status1'] == 'Go to Gate  ' and row['passengergate'] == " ":
+                    row['status1'] = 'Gate Info Shortly'                    
+            except KeyError:
                 pass
+
+
 
     # parse_records    
         self.context = {'table': []}
@@ -114,8 +122,8 @@ class TableGenerator():
             # Rules for which flights are displayed
             displayrules = [
                 row['departureairport'] == 'JER',
-                row['origindate'] == effectivedate,
-                360 > row['timedelta'] > -90
+                # row['origindate'] == effectivedate,
+                # 360 > row['timedelta'] > -90
                 ]
 
             if all(displayrules):
