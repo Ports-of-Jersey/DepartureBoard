@@ -39,10 +39,10 @@
               <td>{{ row.scheduledtime }}</td>
               
               {% if row.status2 is defined %}
-                <td style="color:{{ row.statuscolor1 }}">{{ row.status1 }}</td>
+                <td style="color:{{ row.statuscolor }}">{{ row.status1 }}</td>
               {% else %}
-                <td class="status1" style="color:{{ row.statuscolor1 }}">{{ row.status1 }}</td>
-                <td class="status2" style="display:none;color:{{ row.statuscolor2 }}">{{ row.status2 }}</td>
+                <td class="status1" style="color:{{ row.statuscolor }}">{{ row.status1 }}</td>
+                <td class="status2" style="display:none;color:{{ row.statuscolor }}">{{ row.status2 }}</td>
               {% endif %}
             </tr>
           {% endfor %}            

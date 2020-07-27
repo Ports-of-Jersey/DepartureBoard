@@ -1,9 +1,11 @@
 from templates import *
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
+from dateutil.tz import gettz
 import json
 
-BST = True
+BST = datetime.now(gettz("Europe/London")).isoformat()[26:32] == '+01:00'
+print("[",datetime.now(),"] - BST is",BST)
 
 class TableGenerator():
     def __init__(self, template, source, elements, output):
@@ -25,7 +27,6 @@ class TableGenerator():
         def status_times(timemessage, operationqualifier, timetype):
             try:
                 row[timemessage] = record.find('operationtime', operationqualifier=operationqualifier, timetype=timetype).get_text()
-            
                 date_time_str = row[timemessage]
                 if BST:
                     date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%dT%H:%M:%S.%fZ') + timedelta(hours = 1)
@@ -52,15 +53,12 @@ class TableGenerator():
                 row['timedelta'] = -(delta.seconds / 60) // 1
 
         def gate_times(scheduledtime):
-            date_time_str = row['scheduledtime']
-
-            try:
-                gatetime = gatetimeslookup[row['airline']] / 60
+            try: gatetime = gatetimeslookup[row['airline']] / 60
             except KeyError:
                 gatetime = 0.5
 
             try:
-                date_time_obj = datetime.strptime(date_time_str, '%H:%M')
+                date_time_obj = datetime.strptime(row['scheduledtime'], '%H:%M')
                 date_time_obj = date_time_obj + timedelta(hours = -gatetime)
                 row['gatetime'] = date_time_obj.strftime('%H:%M')
             except ValueError:
@@ -76,13 +74,13 @@ class TableGenerator():
                 try:
                     additionalfield = statuslookup[remarkfreetext][2]
                     row['status1'] = statuslookup[remarkfreetext][0] + " " + row[additionalfield]
-                    row['statuscolor1'] = statuslookup[remarkfreetext][1]
+                    row['statuscolor'] = statuslookup[remarkfreetext][1]
                 except IndexError:
                     row['status1'] = statuslookup[remarkfreetext][0]
-                    row['statuscolor1'] = statuslookup[remarkfreetext][1]
+                    row['statuscolor'] = statuslookup[remarkfreetext][1]
                     print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No additional field specified")
             except KeyError:
-                print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value found for remarkfreetext")
+                print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value for remarkfreetext")
 
             try: row['status2']
             except KeyError:
@@ -92,13 +90,12 @@ class TableGenerator():
             try:
                 if row['status1'] == 'Cancelled':
                     row['status2'] = 'Go to Bagage Reclaim'
-                    row['statuscolor2'] = 'red'
+                    row['statuscolor'] = 'red'
 
                 if row['status1'] == 'Go to Gate  ' and row['passengergate'] == " ":
                     row['status1'] = 'Gate Info Shortly'                    
             except KeyError:
                 pass
-
 
 
     # parse_records    
@@ -112,7 +109,7 @@ class TableGenerator():
                     row[key] = record.find(key).get_text()
                 except AttributeError:
                     row[key] = " "
-                    print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value found for",key)
+                    print("[",datetime.now(),"] -",row['airline'],row['flightnumber'],"- No value for",key)
 
             status_times('airbornetime', 'TKO', 'ACT')
             status_times('estimatedtime', 'OFB', 'EST')
@@ -125,8 +122,8 @@ class TableGenerator():
             displayrules = [
                 row['departureairport'] == 'JER',
                 row['origindate'] == effectivedate,
-                360 > row['timedelta'] > -90
-                ]
+                360 > row['timedelta'] > -30
+            ]
 
             if all(displayrules):
                 self.context['table'].append(row)

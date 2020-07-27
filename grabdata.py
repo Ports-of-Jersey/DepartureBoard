@@ -18,12 +18,11 @@ service2 = client.bind(service, port)
 service2.flightRequest(userID = userID, fullRefresh = True)
 flight_xml = etree.tostring(history.last_received["envelope"], encoding="unicode", pretty_print=True)
 
-if "Success" in flight_xml:
+if "Warning:" in flight_xml:
+    print("[",datetime.now(),"] - WARNING! Unable to access AIDX")
+else:
     f = open("flightinfo.xml", "w")
     f.write(flight_xml)
     f.close()
 
     print("[",datetime.now(),"] -",os.path.getsize('flightinfo.xml'),"Bytes pulled from AIDX")
-else:
-    print("[",datetime.now(),"] - WARNING! Unable to access AIDX")
-    print(flight_xml)

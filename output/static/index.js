@@ -14,16 +14,16 @@ setDate();
 var altStatus = setInterval(switchStatus, 4000);
 
 function switchStatus() {
-  var x = document.getElementsByClassName("status1");
-  var y = document.getElementsByClassName("status2");
-  var i = 0
-  while (i < x.length) {
-    if (x[i].style.display === "none") {
-      x[i].style.display = "block";
-      y[i].style.display = "none";
+  var messageX = document.getElementsByClassName("status1");
+  var messageY = document.getElementsByClassName("status2");
+  var row = 0
+  while (i < messageX.length) {
+    if (messageX[row].style.display === "none") {
+      messageX[row].style.display = "block";
+      messageY[row].style.display = "none";
     } else {
-      x[i].style.display = "none";
-      y[i].style.display = "block";
+      messageX[row].style.display = "none";
+      messageY[row].stmyle.display = "block";
     }
     i ++;
   }
