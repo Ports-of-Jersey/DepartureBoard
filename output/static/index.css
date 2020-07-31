@@ -53,7 +53,7 @@ h2 {
   height: 10vh;
   min-height: 75px;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.8em;
 }
 
 .departures-page header .logo {
@@ -101,6 +101,10 @@ table.departures thead th:nth-child(3) {
 }
 
 table.departures thead th:nth-child(4) {
+  width: 10%;
+}
+
+table.departures thead th:nth-child(5) {
   width: auto;
 }
 

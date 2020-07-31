@@ -27,6 +27,7 @@
             <th>Flight</th>
             <th>Destination</th>
             <th>STD</th>
+            <th>Gate</th>
             <th>Status</th>
           </thead>
           <tbody>
@@ -37,6 +38,8 @@
               <td>{{ row.arrivalairport }}</td>
 
               <td>{{ row.scheduledtime }}</td>
+
+              <td>{{ row.passengergate }}</td>
               
               {% if row.status2 is defined %}
                 <td style="color:{{ row.statuscolor }}">{{ row.status1 }}</td>

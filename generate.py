@@ -38,19 +38,13 @@ class TableGenerator():
             except AttributeError:
                 row[timemessage] = " "
 
-        def time_delta(operationtime):
+        def time_delta(timemessage):
             timenow = datetime.now()
-            if BST:
-                timestd = datetime.strptime(operationtime, '%Y-%m-%dT%H:%M:%S.%fZ') + timedelta(hours = 1)
-            else:
-                timestd = datetime.strptime(operationtime, '%Y-%m-%dT%H:%M:%S.%fZ')
-
-            if timestd > timenow:
-                delta = timestd - timenow
-                row['timedelta'] = (delta.seconds / 60) // 1
-            else:
-                delta = timenow - timestd
-                row['timedelta'] = -(delta.seconds / 60) // 1
+            try:
+                timestd = datetime.strptime(row[timemessage], '%H:%M')
+                row[timemessage + 'delta'] = abs((timestd.hour * 60 + timestd.minute) - (timenow.hour * 60 + timenow.minute))
+            except ValueError:
+                row[timemessage + 'delta'] = 0
 
         def gate_times(scheduledtime):
             try: gatetime = gatetimeslookup[row['airline']] / 60
@@ -116,13 +110,17 @@ class TableGenerator():
             status_times('scheduledtime', 'OFB', 'SCT')
 
             gate_times('scheduledtime')
-            time_delta(row['operationtime'])
+            time_delta('scheduledtime')
+            time_delta('airbornetime')
+            
+            print(row)
 
             # Rules for which flights are displayed
             displayrules = [
                 row['departureairport'] == 'JER',
                 row['origindate'] == effectivedate,
-                360 > row['timedelta'] > -30
+                row['scheduledtimedelta'] < 360,
+                row['airbornetimedelta'] > -15
             ]
 
             if all(displayrules):

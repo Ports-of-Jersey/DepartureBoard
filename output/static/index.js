@@ -17,14 +17,14 @@ function switchStatus() {
   var messageX = document.getElementsByClassName("status1");
   var messageY = document.getElementsByClassName("status2");
   var row = 0
-  while (i < messageX.length) {
+  while (row < messageX.length) {
     if (messageX[row].style.display === "none") {
       messageX[row].style.display = "block";
       messageY[row].style.display = "none";
     } else {
       messageX[row].style.display = "none";
-      messageY[row].stmyle.display = "block";
+      messageY[row].style.display = "block";
     }
-    i ++;
+    row ++;
   }
 }
